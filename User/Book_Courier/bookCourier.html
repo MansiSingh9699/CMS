@@ -36,30 +36,30 @@
 		<form class="book-form">
 							<div class="form-group">
 								<span class="form-label">Receiver Name :</span>
-								<input class="form-control" type="text" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" placeholder="Enter Receiver name" required="required"><br/>
+								<input class="form-control" type="text" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" placeholder="Enter Receiver name" name="rname" required="required"><br/>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Receiver Email : </span>
-								<input class="form-control" type="email" placeholder="Enter Receiver email" required="required"><br/>
+								<input class="form-control" type="email" placeholder="Enter Receiver email" name="remail" required="required"><br/>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Receiver Phone No. : </span>
-								<input class="form-control" type="tel" pattern="^\d{10}$"  placeholder="Enter Receiver's phone no." required="required"><br/>
+								<input class="form-control" type="tel" pattern="^\d{10}$"  placeholder="Enter Receiver's phone no." name="rphone" required="required"><br/>
 							</div>
 							
 							<br/><br/>
 							
 							<div class="form-group">
 								<span class="form-label">Pickup Location : </span>
-								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter Pickup Location" required="required"><br/>
+								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter Pickup Location" name="pickLocation" required="required"><br/>
 							</div>
 							<div class="form-group">
 								<span class="form-label">City : </span>
-								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter City" required="required"><br/>
+								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter City" name="pickCity" required="required"><br/>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Zone : </span>
-								<select class="form-control ddown" name="stateslist" required="required">
+								<select class="form-control ddown" name="pickZone" required="required">
 									<option value="">Select Pickup State</option>
 									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 									<option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -76,7 +76,7 @@
 							</div>
 							<div class="form-group">
 								<span class="form-label">PIN Code : </span>
-								<input class="form-control" type="text" pattern="^\d{6}$" placeholder="Enter PIN Code of your area" required="required">
+								<input class="form-control" type="text" pattern="^\d{6}$" placeholder="Enter PIN Code of your area" name="sourcePIN" required="required">
 							</div>
 							
 							<br/><br/>
@@ -84,15 +84,15 @@
 							
 							<div class="form-group">
 								<span class="form-label">Destination : </span>
-								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter ZIP/Location" required="required">
+								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter Drop Location" name="dropLocation" required="required">
 							</div>
 							<div class="form-group">
 								<span class="form-label">City : </span>
-								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter Destination City" required="required">
+								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter Destination City" name="dropCity" required="required">
 							</div>
 							<div class="form-group">
 								<span class="form-label">Zone : </span>
-								<select class="form-control ddown" name="stateslist" required="required">
+								<select class="form-control ddown" name="dropZone" required="required">
 									<option value="">Select Destination State</option>
 									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 									<option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -109,13 +109,13 @@
 							</div>
 							<div class="form-group">
 								<span class="form-label">Dest. PIN Code : </span>
-								<input class="form-control" type="text" pattern="^\d{6}$" placeholder="Enter PIN Code" required="required">
+								<input class="form-control" type="text" pattern="^\d{6}$" placeholder="Enter PIN Code" name="destPIN" required="required">
 							</div><br/><br/>
 							<div class="row">
 								<div class="col-sm-5">
 									<div class="form-group">
 										<span class="form-label">Pickup Date: </span>
-										<input class="form-control" type="date" required="required">
+										<input class="form-control" type="date" name="pickDate" required="required">
 									</div>
 								</div>
 								<div class="col-sm-7">
@@ -123,7 +123,7 @@
 										<div class="col-sm-4">
 											<div class="form-group">
 												<span class="form-label">Hour : </span>
-												<select class="form-control ddown" required="required">
+												<select class="form-control ddown" name="pickHour" required="required">
 													<option>1</option>
 													<option>2</option>
 													<option>3</option>
@@ -143,7 +143,7 @@
 										<div class="col-sm-4">
 											<div class="form-group">
 												<span class="form-label">Min : </span>
-												<select class="form-control ddown" required="required">
+												<select class="form-control ddown" name="pickMin" required="required">
 													<option>05</option>
 													<option>10</option>
 													<option>15</option>
@@ -162,7 +162,7 @@
 										<div class="col-sm-4">
 											<div class="form-group">
 												<span class="form-label">AM/PM : </span>
-												<select class="form-control ddown" required="required">
+												<select class="form-control ddown" name="pickTime" required="required">
 													<option>AM</option>
 													<option>PM</option>
 												</select>
