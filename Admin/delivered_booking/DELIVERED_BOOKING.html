@@ -11,6 +11,8 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="..\style.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!-- start header -->
@@ -24,20 +26,8 @@
 	<br/>
 </div>
 </center>
-<!--
-<div id="header">
-	<div id="menu">
-		<ul>
-			<li class="current_page_item"><a href="#">Homepage</a></li>
-			<li><a href="#">Blogs</a></li>
-			<li><a href="#">Photos</a></li>
-			<li><a href="#">About</a></li>
-			<li class="last"><a href="#">Contact</a></li>
-		</ul>
-	</div>
-</div>
--->
 <!-- end header -->
+
 <!-- start page -->
 <div id="page">
 	<!-- start content -->
@@ -52,9 +42,11 @@
 			</div>
 			
 			</center>
-			<br>
-			<br>
-			<table>
+			<div class="form-group">
+				<input type="text" class="search" placeholder="Filter..">
+			</div>
+			<br/><br/>
+			<table class="table table-striped" id="userTbl">
 				<tr>
 					<th>SR.NO.</th>
 					<th>DATE</th>
@@ -110,11 +102,27 @@
 				</td>&nbsp;
 			  </tr>
 			</table>
+			<script>
+				$(document).ready(function(){
+					$('.search').on('keyup',function(){
+						var searchTerm = $(this).val().toLowerCase();
+						$('#userTbl tbody tr').each(function(){
+							var lineStr = $(this).text().toLowerCase();
+							if(lineStr.indexOf(searchTerm) === -1){
+								$(this).hide();
+							}else{
+								$(this).show();
+							}
+						});
+					});
+				});
+			</script>
+		
 			<br>
 			<br>
 			<center>
 				<div class="form-btn">
-					<button class=" button submit-btn"><a href="#">Generate Report</a></button>
+					<button class=" button submit-btn"><a class="gen" href="#">Generate Report</a></button>
 				</div>
 			</center>
 		</div>

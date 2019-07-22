@@ -11,6 +11,8 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="..\style.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!-- start header -->
@@ -40,7 +42,11 @@
 			</div>
 			
 			</center>
-			<table id="table_format">
+			<div class="form-group">
+				<input type="text" class="search" placeholder="Filter..">
+			</div>
+			<br/><br/>
+			<table class="table table-striped" id="userTbl">
 			  <tr>
 				<th>S.No.</th> &nbsp;
 				<th>DATE</th> &nbsp;
@@ -52,10 +58,10 @@
 			  
 			  <tr>
 				<td>1</td>&nbsp;
-				<td>03 July, 2019</td>&nbsp;
+				<td>03 April, 2019</td>&nbsp;
 				<td>0987654321</td>&nbsp;
 				<td>LUCKNOW</td>&nbsp;
-				<td>LUCKNOW</td>&nbsp;
+				<td>Delhi</td>&nbsp;
 				<td>
 					<div class="tooltip">		
 						<a href="#">Status</a>
@@ -66,10 +72,10 @@
 			  
 			  <tr>
 				<td>2</td>&nbsp;
-				<td>03 July, 2019</td>&nbsp;
-				<td>0987654321</td>&nbsp;
-				<td>LUCKNOW</td>&nbsp;
-				<td>LUCKNOW</td>&nbsp;
+				<td>03 May, 2019</td>&nbsp;
+				<td>09874683471</td>&nbsp;
+				<td>Ahemdabad</td>&nbsp;
+				<td>Mumbai</td>&nbsp;
 				<td>
 					<div class="tooltip">		
 						<a href="#">Status</a>
@@ -83,7 +89,7 @@
 				<td>03 July, 2019</td>&nbsp;
 				<td>0987654321</td>&nbsp;
 				<td>LUCKNOW</td>&nbsp;
-				<td>LUCKNOW</td>&nbsp;
+				<td>Mumbai</td>&nbsp;
 				<td>
 					<div class="tooltip">		
 						<a href="#">Status</a>
@@ -93,10 +99,20 @@
 			  </tr>
 			</table>
 			
-			<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-			<script src="lisenme.js"></script>
 			<script>
-			jQuery('#table_format').ddTableFilter();
+				$(document).ready(function(){
+					$('.search').on('keyup',function(){
+						var searchTerm = $(this).val().toLowerCase();
+						$('#userTbl tbody tr').each(function(){
+							var lineStr = $(this).text().toLowerCase();
+							if(lineStr.indexOf(searchTerm) === -1){
+								$(this).hide();
+							}else{
+								$(this).show();
+							}
+						});
+					});
+				});
 			</script>
 
 		</div>
