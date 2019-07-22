@@ -17,6 +17,7 @@
 <center>
 <div id="wrapper">
 <div id="logo">
+	<img src="..\images\download.png">
 	<h1>COURIER MANAGEMENT SYSTEM</h1>
 	<br/>
 	<h3> A WEBSITE TO SOLVE ALL YOUR COURIER NEEDS</h3>
@@ -30,12 +31,44 @@
 	<!-- start content -->
 	<div id="content">
 		<div class="form-header">
-			<h1>My Account</h1>
+			<h1><u><strong>My Account</strong></u></h1><br/>
 		</div>
-		<div>
-			<button type="button">Change Account Password</button><br/><br/>
-			<button type="button">Change Account Details</button>
-		</div>	
+		<form class="book-form">
+			<div class="form-group">
+				<label class="form-label">Name : </label>
+				<input class="form-control" type="text" value="User name"><br/>
+			</div>
+			<div class="form-group">
+				<label class="form-label">Phone No. : </label>
+				<input class="form-control" type="text" value="987654321"><br/>
+            </div>
+			<div class="form-group">
+				<label class="form-label">Email : </label>
+				<input class="form-control" type="text" value="jsmith@yourcompany.com" disabled><br/>
+            </div>
+			<div class="form-group">
+				<label class="form-label">Address : </label>
+				<textarea class="form-control" value="Smith" rows="1">19/7 West Moti Bagh, sarai rohilla</textarea><br/>
+			</div>
+			<div class="form-group">
+				<label class="form-label">City : </label>
+				<select class="form-control ddown" >
+					<option>Your City</option>
+					<option>Mumbai</option>
+					<option>Bengaluru</option>
+					<option>Chennai</option>
+					<option>Kolkata</option>
+				</select>
+				<br/>
+				<label class="form-label">PIN Code : </label>
+				<input type="number" class="form-control" name="pincode" id="pincode" placeholder="PIN Code" value="110035"/>
+			</div>
+		</form>	
+		<br/><br/><br/>
+		<div class="form-btn">
+					<button type="button" id="formButton" class="form-btn submit-btn pay-btn">Update Details</button>
+					<button type="button" id="payNow" class="form-btn submit-btn pay-btn"><a href=".\change_password.html">Change Password</a></button>
+		</div>
 	</div>
 	<!-- end content -->
 	<!-- start sidebar -->
@@ -44,10 +77,10 @@
 			<li>
 				<h2> FEATURES</h2><br/>
 				<ul>
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">TO BE DELIVERED</a></li>
-					<li><a href="#">TO BE PICKED</a></li>
-					<li><a href="#">MY ACCOUNT</a></li>
+					<li><a href="..\index.html">HOME</a></li>
+					<li><a href="..\delivery\deliver.html">TO BE DELIVERED</a></li>
+					<li><a href="..\pickup\pick.html">TO BE PICKED</a></li>
+					<li><a href=".\change.html">MY ACCOUNT</a></li>
 					<li><a href="#">LOGOUT</a></li>
 				</ul>
 			</li>
