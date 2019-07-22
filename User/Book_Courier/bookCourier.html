@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CMS</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- start header -->
+<center>
+<div id="wrapper">
+<div id="logo">
+	<img src="..\images\download.png">
+	<h1>COURIER MANAGEMENT SYSTEM</h1>
+	<br/>
+	<h3> A WEBSITE TO SOLVE ALL YOUR COURIER NEEDS</h3>
+	<br/>
+</div>
+</center>
+
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+		<div class="form-header">
+			<h1><u><strong>Book a Courier</strong></u></h1><br/>
+		</div>
+		<form class="book-form">
+							<div class="form-group">
+								<span class="form-label">Receiver Name :</span>
+								<input class="form-control" type="text" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" placeholder="Enter Receiver name" required="required"><br/>
+							</div>
+							<div class="form-group">
+								<span class="form-label">Receiver Email : </span>
+								<input class="form-control" type="email" placeholder="Enter Receiver email" required="required"><br/>
+							</div>
+							<div class="form-group">
+								<span class="form-label">Receiver Phone No. : </span>
+								<input class="form-control" type="tel" pattern="^\d{10}$"  placeholder="Enter Receiver's phone no." required="required"><br/>
+							</div>
+							
+							<br/><br/>
+							
+							<div class="form-group">
+								<span class="form-label">Pickup Location : </span>
+								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter Pickup Location" required="required"><br/>
+							</div>
+							<div class="form-group">
+								<span class="form-label">City : </span>
+								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter City" required="required"><br/>
+							</div>
+							<div class="form-group">
+								<span class="form-label">Zone : </span>
+								<select class="form-control ddown" name="stateslist" required="required">
+									<option value="">Select Pickup State</option>
+									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Goa">Goa</option>
+							</select>
+							</div>
+							<div class="form-group">
+								<span class="form-label">PIN Code : </span>
+								<input class="form-control" type="text" pattern="^\d{6}$" placeholder="Enter PIN Code of your area" required="required">
+							</div>
+							
+							<br/><br/>
+							
+							
+							<div class="form-group">
+								<span class="form-label">Destination : </span>
+								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter ZIP/Location" required="required">
+							</div>
+							<div class="form-group">
+								<span class="form-label">City : </span>
+								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter Destination City" required="required">
+							</div>
+							<div class="form-group">
+								<span class="form-label">Zone : </span>
+								<select class="form-control ddown" name="stateslist" required="required">
+									<option value="">Select Destination State</option>
+									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Goa">Goa</option>
+							</select>
+							</div>
+							<div class="form-group">
+								<span class="form-label">Dest. PIN Code : </span>
+								<input class="form-control" type="text" pattern="^\d{6}$" placeholder="Enter PIN Code" required="required">
+							</div><br/><br/>
+							<div class="row">
+								<div class="col-sm-5">
+									<div class="form-group">
+										<span class="form-label">Pickup Date: </span>
+										<input class="form-control" type="date" required="required">
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="form-group">
+												<span class="form-label">Hour : </span>
+												<select class="form-control ddown" required="required">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+													<option>10</option>
+													<option>11</option>
+													<option>12</option>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<span class="form-label">Min : </span>
+												<select class="form-control ddown" required="required">
+													<option>05</option>
+													<option>10</option>
+													<option>15</option>
+													<option>20</option>
+													<option>25</option>
+													<option>30</option>
+													<option>35</option>
+													<option>40</option>
+													<option>45</option>
+													<option>50</option>
+													<option>55</option>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<span class="form-label">AM/PM : </span>
+												<select class="form-control ddown" required="required">
+													<option>AM</option>
+													<option>PM</option>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><br/>
+							<div class="form-btn">
+								<button class=" button submit-btn"><a href=".\cost.html">Book Now</a></button>
+							</div>
+			</form>		
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2> FEATURES</h2><br/>
+				<ul>
+					<li><a href="..\index.html">HOME</a></li>
+					<li><a href=".\bookCourier.html">BOOK A COURIER</a></li>
+					<li><a href="..\Cost_Estimation\costestimate.html">CALCULATE ESTIMATED PRICE</a></li>
+					<li><a href="..\My_Couriers\myCouriers.html">MY COURIERS</a></li>
+					<li><a href="..\My_Account\change.html">MY ACCOUNT</a></li>
+					<li><a href="..\..\Login\index.html">LOGOUT</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+</html>
