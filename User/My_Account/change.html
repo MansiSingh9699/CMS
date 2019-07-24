@@ -48,20 +48,38 @@
             </div>
 			<div class="form-group">
 				<label class="form-label">Address : </label>
-				<textarea class="form-control" value="Smith" rows="1">19/7 West Moti Bagh, sarai rohilla</textarea><br/>
+				<textarea class="form-control" id="defAddr" value="19/7 West Moti Bagh, sarai rohilla" rows="1">19/7 West Moti Bagh, sarai rohilla</textarea><br/>
 			</div>
 			<div class="form-group">
 				<label class="form-label">City : </label>
-				<select class="form-control ddown" >
+				<select class="form-control ddown" id="defCity" required="required">
 					<option>Your City</option>
 					<option>Mumbai</option>
 					<option>Bengaluru</option>
 					<option>Chennai</option>
 					<option>Kolkata</option>
 				</select>
-				<br/>
+			</div>
+			<div class="form-group">
+				<span class="form-label">Zone : </span>
+				<select class="form-control ddown" id="defZone" required="required">
+					<option value="">Select Pickup State</option>
+					<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+					<option value="Andhra Pradesh">Andhra Pradesh</option>
+					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+					<option value="Assam">Assam</option>
+					<option value="Bihar">Bihar</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Chhattisgarh">Chhattisgarh</option>
+					<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+					<option value="Daman and Diu">Daman and Diu</option>
+					<option value="Delhi">Delhi</option>
+					<option value="Goa">Goa</option>
+				</select>
+			</div>
+			<div class="form-group">
 				<label class="form-label">PIN Code : </label>
-				<input type="number" class="form-control" name="pincode" id="pincode" placeholder="PIN Code" value="110035"/>
+				<input type="number" class="form-control" name="pincode" id="defPin" placeholder="PIN Code" value="110035"/>
 			</div>
 		</form>	
 		<br/><br/><br/>

@@ -11,6 +11,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/html" src="..\My_Account\change.html"></script>
 </head>
 <body>
 <!-- start header -->
@@ -48,18 +49,21 @@
 							</div>
 							
 							<br/><br/>
+							<div class="form-group">
+								<input class="chkbx" type="checkbox" name="defaultAddr" id="defaultAddr" value="use" onchange= "addressFunction()"><span class="form-label">Use Default Address</span><br>
+							</div>
 							
 							<div class="form-group">
 								<span class="form-label">Pickup Location : </span>
-								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter Pickup Location" name="pickLocation" required="required"><br/>
+								<input class="form-control" type="text" pattern="[a-zA-Z0-9, .]+" placeholder="Enter Pickup Location" name="pickLocation" id="pickLocation" required="required"><br/>
 							</div>
 							<div class="form-group">
 								<span class="form-label">City : </span>
-								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter City" name="pickCity" required="required"><br/>
+								<input class="form-control" type="text" pattern="[A-Za-z ]+" placeholder="Enter City" name="pickCity" id="pickCity" required="required"><br/>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Zone : </span>
-								<select class="form-control ddown" name="pickZone" required="required">
+								<select class="form-control ddown" name="pickZone" id="pickZone" required="required">
 									<option value="">Select Pickup State</option>
 									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 									<option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -72,12 +76,34 @@
 									<option value="Daman and Diu">Daman and Diu</option>
 									<option value="Delhi">Delhi</option>
 									<option value="Goa">Goa</option>
-							</select>
+								</select>
 							</div>
 							<div class="form-group">
 								<span class="form-label">PIN Code : </span>
-								<input class="form-control" type="number" pattern="^\d{6}$" placeholder="Enter PIN Code of your area" name="sourcePIN" required="required">
+								<input class="form-control" type="number" pattern="^\d{6}$" placeholder="Enter PIN Code of your area" name="sourcePIN" id="sourcePIN" required="required">
 							</div>
+							
+							<script> 
+								function addressFunction() 
+								{ 
+								  if (document.getElementById('defaultAddr').checked) 
+								  { 
+									console.log(document.getElementById('defAddr').value);
+									document.getElementById('pickLocation').value=document.getElementById('defAddr').value; 
+									document.getElementById('pickCity').value=document.getElementById('defCity').value; 
+									document.getElementById('pickZone').value=document.getElementById('defZone').value; 
+									document.getElementById('sourcePIN').value=document.getElementById('defPin').value;
+								  } 
+									  
+								  else
+								  { 
+									document.getElementById('pickLocation').value=""; 
+									document.getElementById('pickCity').value=""; 
+									document.getElementById('pickZone').value=""; 
+									document.getElementById('sourcePIN').value=""; 
+								  } 
+								} 
+							</script>
 							
 							<br/><br/>
 							
